@@ -1,0 +1,45 @@
+{% comment %} to use this, 
+ 1. add css file in asset folder
+ 2. add below code in custom liquid block on product page inside product information section
+ {% endcomment %}
+
+
+{{ 'custom-offer-block.css' | asset_url | stylesheet_tag }}
+
+<div class="product-links-grid">
+  <a href="/collections/jeans-1" class="product-link-card">
+    <span class="product-link-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20.59 13.41 11 3.83A2 2 0 0 0 9.59 3H4a1 1 0 0 0-1 1v5.59A2 2 0 0 0 3.83 11l9.58 9.59a2 2 0 0 0 2.83 0l4.35-4.35a2 2 0 0 0 0-2.83ZM7.5 8A1.5 1.5 0 1 1 9 6.5 1.5 1.5 0 0 1 7.5 8Z"/>
+      </svg>
+    </span>
+    <span>Buy Any 2 Jeans for ₹2999</span>
+  </a>
+
+  <a href="/collections/jeans-1" class="product-link-card">
+    <span class="product-link-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20.59 13.41 11 3.83A2 2 0 0 0 9.59 3H4a1 1 0 0 0-1 1v5.59A2 2 0 0 0 3.83 11l9.58 9.59a2 2 0 0 0 2.83 0l4.35-4.35a2 2 0 0 0 0-2.83ZM7.5 8A1.5 1.5 0 1 1 9 6.5 1.5 1.5 0 0 1 7.5 8Z"/>
+      </svg>
+    </span>
+    <span>Buy Any 3 Jeans for ₹4299 </span>
+  </a>
+
+  <a href="/collections/jeans-1" class="product-link-card">
+    <span class="product-link-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20.59 13.41 11 3.83A2 2 0 0 0 9.59 3H4a1 1 0 0 0-1 1v5.59A2 2 0 0 0 3.83 11l9.58 9.59a2 2 0 0 0 2.83 0l4.35-4.35a2 2 0 0 0 0-2.83ZM7.5 8A1.5 1.5 0 1 1 9 6.5 1.5 1.5 0 0 1 7.5 8Z"/>
+      </svg>
+    </span>
+    <span>Buy Any 4 Jeans for ₹5299</span>
+  </a>
+
+  <a href="/collections/jeans-1" class="product-link-card">
+    <span class="product-link-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20.59 13.41 11 3.83A2 2 0 0 0 9.59 3H4a1 1 0 0 0-1 1v5.59A2 2 0 0 0 3.83 11l9.58 9.59a2 2 0 0 0 2.83 0l4.35-4.35a2 2 0 0 0 0-2.83ZM7.5 8A1.5 1.5 0 1 1 9 6.5 1.5 1.5 0 0 1 7.5 8Z"/>
+      </svg>
+    </span>
+    <span>Buy Any 6 Jeans for ₹7699</span>
+  </a>
+</div>

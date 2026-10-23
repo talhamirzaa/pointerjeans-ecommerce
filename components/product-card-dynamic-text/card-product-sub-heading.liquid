@@ -1,0 +1,78 @@
+{% comment %} to use below, add the html/liquid code in 'card__information' class div 
+ inside 'card-product.liquid' file 
+
+add css in 'component-rating.css'
+
+
+{% endcomment %}
+
+
+
+{% comment %} custom code for collction name & rating {% endcomment %}
+
+<style>
+  .rating-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between !important;
+    gap: 12px;
+    min-width: 0;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .rating-wrapper > * {
+    zoom: 0.85;
+  }
+
+  /* LEFT SIDE CONTAINER */
+  .rating-wrapper__meta {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  /* ACTUAL TEXT */
+  .rating-wrapper__meta-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    white-space: normal;
+    overflow: hidden;
+    word-break: break-all;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    min-width: 0;
+  }
+
+  /* 2nd element : review */
+  .rating-wrapper__rating {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+</style>
+
+<div class="rating-wrapper">
+  <!-- 1st element : Product metafield -->
+  <div class="rating-wrapper__meta">
+    <div class="rating-wrapper__meta-text">
+      {{ card_product.metafields.custom.main_collection_name | strip_html | escape }}
+    </div>
+  </div>
+
+  <!-- 2nd element : Judge.me rating -->
+  <div class="rating-wrapper__rating">
+    <!-- Start of Judge.me code -->
+    <div
+      style="{{ jm_style }}"
+      class="jdgm-widget jdgm-preview-badge"
+      data-id="{{ card_product.id }}"
+      data-auto-install="false"
+    >
+      {{ card_product.metafields.judgeme.badge }}
+    </div>
+    <!-- End of Judge.me code -->
+  </div>
+</div>
